@@ -7,7 +7,6 @@ DragonGirlBackground 是一款适用于 Windows 商店版 Codex 桌面应用的�
 本项目内置的 GPT 龙娘背景参考 **ZipZipPipe** 的角色设计与立绘制作。
 
 - 原作者：**ZipZipPipe**
-- 原图来源：[《AI娘化》
 
 背景由使用 OpenAI ImageGen 改编为白色线稿、紫色眼睛和透明背景。
 
