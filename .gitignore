@@ -1,0 +1,12 @@
+node_modules/
+*.zip
+*.log
+.env
+.env.*
+profile/
+work/
+dist/
+tests/plugin-check-*/
+tests/settings-storage-*/
+tests/background-browser-test-*/
+tests/background-browser-preview.png

@@ -1,0 +1,20 @@
+{
+  "name": "ccy1430-background-local",
+  "interface": {
+    "displayName": "ccy1430 Plugins"
+  },
+  "plugins": [
+    {
+      "name": "dragon-background",
+      "source": {
+        "source": "local",
+        "path": "./plugins/dragon-background"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    }
+  ]
+}

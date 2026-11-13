@@ -1,0 +1,8 @@
+{
+  "enabled": true,
+  "imagePath": "./assets/background.png",
+  "transparency": 75,
+  "scale": 100,
+  "fit": "完整显示",
+  "position": "居中"
+}

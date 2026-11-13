@@ -1,0 +1,9 @@
+{
+  "mcpServers": {
+    "dragon_background": {
+      "command": "cmd.exe",
+      "args": ["/d", "/s", "/c", "call", "./scripts/launch-server.cmd"],
+      "cwd": "./"
+    }
+  }
+}

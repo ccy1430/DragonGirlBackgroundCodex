@@ -1,0 +1,46 @@
+{
+  "asset": "assets/background.png",
+  "originalArtist": "ZipZipPipe",
+  "character": "GPT dragon girl / GPT 龙娘",
+  "adaptationBy": "ccy1430",
+  "generation": "OpenAI ImageGen, using user-provided visual references",
+  "modifications": [
+    "White contour line art",
+    "Violet eyes",
+    "Transparent background",
+    "930 × 1691 portrait composition"
+  ],
+  "usage": "Non-commercial use only; retain original artist attribution, sources, and the artwork notices.",
+  "licenseIdentifier": "LicenseRef-Dragon-Artwork-NonCommercial",
+  "standardUpstreamLicense": null,
+  "sources": [
+    {
+      "title": "ZipZipPipe — AI娘化",
+      "url": "https://www.pixiv.net/artworks/148186519",
+      "role": "Original character and reference artwork; attribution and non-commercial terms"
+    },
+    {
+      "title": "ZipZipPipe — 亿万身家的她们",
+      "url": "https://www.bilibili.com/video/BV1bARXBYEZz/",
+      "role": "Creator statement allowing reuse and further creation"
+    },
+    {
+      "title": "Gender Swap AI — GPT character references",
+      "url": "https://genderswapai.com/zh-CN/ai-gijinka/gpt",
+      "role": "User-provided gpt.png turnaround reference; the site identifies it as an AI-created derivative reference; a separate standard license for that file was not found"
+    }
+  ],
+  "verifiedOn": "2026-11-13",
+  "rightsNote": "This records source statements and this release's non-commercial artwork restriction. It does not grant third-party rights, confirm a standard CC license, or claim that AI generation clears reference or character rights.",
+  "noticeURL": "https://github.com/ccy1430/DragonGirlBackground/blob/main/README.md",
+  "assetSha256": "62b78b147f55583c4675c82b6c98ae418abb2f8efa9224cacae2633088e8ccbe",
+  "softwareLicense": {
+    "identifier": "MIT",
+    "text": "MIT License\n\nCopyright (c) 2026 ccy1430\n\nPermission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the \"Software\"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.",
+    "excludes": [
+      "character artwork",
+      "artwork screenshots",
+      "third-party character/reference materials"
+    ]
+  }
+}

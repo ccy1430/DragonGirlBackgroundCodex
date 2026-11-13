@@ -1,0 +1,14 @@
+{
+  "name": "dragon-background",
+  "version": "0.3.2",
+  "private": true,
+  "type": "module",
+  "description": "Local background images for Codex desktop on Windows.",
+  "engines": {
+    "node": ">=24"
+  },
+  "os": [
+    "win32"
+  ],
+  "license": "MIT AND LicenseRef-Dragon-Artwork-NonCommercial"
+}

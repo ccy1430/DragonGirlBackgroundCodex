@@ -1,0 +1,107 @@
+{
+  "name": "dragon-background",
+  "version": "0.3.2",
+  "description": "Local background images for Codex desktop on Windows.",
+  "author": {
+    "name": "ccy1430"
+  },
+  "license": "MIT AND LicenseRef-Dragon-Artwork-NonCommercial",
+  "keywords": [
+    "background",
+    "wallpaper",
+    "windows",
+    "desktop",
+    "local"
+  ],
+  "requires_local_executor": true,
+  "mcpServers": "./.mcp.json",
+  "interface": {
+    "displayName": "DragonGirlBackground",
+    "shortDescription": "Local chat background images",
+    "longDescription": "Display a local image behind the Codex chat pane on Windows. Choose your own PNG, JPEG, or static WebP and adjust transparency, image size, fit, and position in native plugin settings. Uses a verified localhost desktop debugging connection; enabling it after a normal launch asks before restarting the app. Requires Node.js 24+ and the Windows Store Codex desktop distribution. Experimental desktop customization; app updates may change compatibility. The bundled GPT dragon-girl wallpaper is an AI-assisted adaptation of ZipZipPipe’s character/reference art, for non-commercial use with attribution and source notices. Read Artwork credits & license in settings. Unofficial; not affiliated with OpenAI or the original artist.",
+    "developerName": "ccy1430",
+    "category": "Productivity",
+    "capabilities": [
+      "Read",
+      "Write"
+    ],
+    "brandColor": "#A78BFA",
+    "logo": "./assets/logo.svg",
+    "composerIcon": "./assets/icon.svg",
+    "websiteURL": "https://github.com/ccy1430/DragonGirlBackground",
+    "supportURL": "https://github.com/ccy1430/DragonGirlBackground/issues"
+  },
+  "extensions": {
+    "com.openai": {
+      "review": {
+        "test_cases": {
+          "positive": [
+            {
+              "description": "Read settings after an ordinary launch.",
+              "prompt": "Show the current DragonGirlBackground settings without enabling it.",
+              "tools_triggered": "settings.read, background_status",
+              "expected_behavior": "The effective switch is off when no verified localhost debug connection exists. No window is closed or opened."
+            },
+            {
+              "description": "Save display settings on a debug-enabled host.",
+              "prompt": "Set background transparency to 40% and image scale to 80%.",
+              "tools_triggered": "settings.update, settings.read",
+              "expected_behavior": "Values persist after rereading. The image updates in the chat pane, and native inputs remain usable."
+            },
+            {
+              "description": "Select a local image using the native file picker.",
+              "prompt": "Let me choose another local background image.",
+              "tools_triggered": "choose_image",
+              "expected_behavior": "A local picker accepts a PNG, JPEG, or static WebP. Cancel leaves the old image; selecting a valid image preserves the existing background switch."
+            },
+            {
+              "description": "Show source and usage terms.",
+              "prompt": "Who created the dragon girl, and what are the artwork usage terms?",
+              "tools_triggered": "artwork_info",
+              "expected_behavior": "Credit ZipZipPipe, show the original source URLs, identify ccy1430’s AI adaptation, and explain attribution and non-commercial use. Do not call the GPT artwork CC0 or CC BY-NC-SA 4.0."
+            },
+            {
+              "description": "Disable a running background.",
+              "prompt": "Turn off the background image.",
+              "tools_triggered": "settings.update, settings.read",
+              "expected_behavior": "The wallpaper is removed, the off preference is saved, and the single background worker exits. The chat window remains open."
+            }
+          ],
+          "negative": [
+            {
+              "description": "Reject a remote image URL.",
+              "prompt": "Use https://example.com/background.png directly as my background.",
+              "tools_triggered": "settings.update",
+              "expected_behavior": "Reject remote URLs without fetching them, without changing the saved selection, and without opening a restart confirmation."
+            },
+            {
+              "description": "Respect refusal to restart.",
+              "prompt": "Enable the background on a normal launch, but choose No in the restart dialog.",
+              "tools_triggered": "settings.update",
+              "expected_behavior": "No restart, new app instance, or preference change occurs after No. Never close the app without explicit confirmation."
+            },
+            {
+              "description": "Reject an invalid appearance range.",
+              "prompt": "Set transparency to 120% and scale to 10%.",
+              "tools_triggered": "settings.update",
+              "expected_behavior": "Reject out-of-range values; retain the old settings and report the accepted ranges."
+            }
+          ]
+        },
+        "commerce": false,
+        "commerce_description": "No purchases, ads, or payment processing. The bundled character artwork is restricted to non-commercial use."
+      },
+      "publication": {
+        "release_notes": "0.3.2: Rename the product to DragonGirlBackground across the listing, MCP title, credits, and documentation. Retain the 75% transparency, 100% scale, contain, centered default profile.",
+        "translations": {
+          "zh-CN": {
+            "subtitle": "本机聊天背景图片",
+            "description": "Windows 桌面背景插件：支持本地选图、透明度、缩放和位置设置。普通启动时背景显示关闭，开启前询问是否重启。内置 GPT 龙娘改编图仅限非商业使用，须保留 ZipZipPipe 署名和来源。需要 Node.js 24+。非 OpenAI 官方插件。"
+          }
+        }
+      }
+    }
+  },
+  "repository": "https://github.com/ccy1430/DragonGirlBackground",
+  "homepage": "https://github.com/ccy1430/DragonGirlBackground"
+}
