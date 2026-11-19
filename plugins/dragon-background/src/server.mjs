@@ -32,7 +32,7 @@ async function handle(message) {
   }
   let result;
   if (method === 'initialize') result = { protocolVersion: params.protocolVersion || '2025-11-25', serverInfo, capabilities };
-  else if (method === 'server/discover') result = { resultType: 'complete', supportedVersions: ['2026-07-28'], capabilities: { tools: {}, extensions: { 'openai/settings': settingsCapability } }, _meta: { 'io.modelcontextprotocol/serverInfo': serverInfo } };
+  else if (method === 'server/discover') result = { resultType: 'complete', supportedVersions: ['2026-07-28'], capabilities: { tools: {}, extensions: { 'openai/settings': settingsCapability } }, _meta: { 'io.modelcontextprotocol/serverInfo': serverInfo }, ttlMs: 0, cacheScope: 'private' };
   else if (method === 'ping') result = {};
   else if (method === 'tools/list') result = { tools };
   else if (method === 'resources/list' || method === 'prompts/list') result = { [method.startsWith('resources') ? 'resources' : 'prompts']: [] };
